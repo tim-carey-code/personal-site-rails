@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="synthwave"> 
+<html data-theme="synthwave" class=""> 
     <head>
       <title>Tim Carey - Rails Developer</title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,8 +18,8 @@
       <% elsif alert %> 
         <p class="alert bg-red-500"><%= alert %></p>
       <% end %>
-      <main class="container mx-auto mt-10 px-12">
-        <%= yield %>  
-      </main>  
+      <main>
+        <%= yield %>
+      </main>
     </body>
 </html>

@@ -5,6 +5,10 @@
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
       <li><%= link_to "Blog", blogs_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Admin", admin_root_path %></li>
+        <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% end %>
     </ul>
   </div>
 </div>
