@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs or /blogs.json
   def index
-    @pagy, @blogs = pagy(Blog.all)
+    @pagy, @blogs = pagy(Blog.all.order(created_at: :desc))
   end
 
   # GET /blogs/1 or /blogs/1.json
