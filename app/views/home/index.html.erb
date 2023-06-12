@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center flex-col">
   <div class="grid grid-cols-2 items-center my-auto mb-4">
+    <h1 class="text-5xl mr-6">Hi, I'm Tim! 👋</h1>
     <%= image_tag "headshot.jpg", class: "w-[153px] h-[103px] rounded-lg" %>
-    <h1 class="text-5xl">Hi, I'm Tim! 👋</h1> 
   </div>
   <div class="grid grid-cols-1 mb-4">
     <p class="text-2xl font-bold">Rails Developer 💻 | Sports 🏀🥎🎾⛳️ | Guitar 🎸 | Cat Dad 🐱 | Bourbon Connoisseur 🥃</p>
@@ -9,21 +9,27 @@
     <div class="grid grid-cols-1">
     <p class="text-2xl font-bold">Rails | Ruby | JavaScript | ReactJS | TailwindCSS | Bootstrap </p>
   </div>
-  <div class="grid grid-cols-1">
-    <a href="https://dev.to/tccodez" class="link link-primary p-2" target="_blank">
-      <i class="fa-brands fa-dev text-white no-underline fs-1"></i>
+  <div class="flex gap-10 justify-around mt-4">
+    <a href="https://dev.to/tccodez" class="" target="_blank">
+      <i class="fa-brands fa-dev no-underline text-3xl"></i>
     </a>
-    <a href="https://www.linkedin.com/in/tim-carey-9a45b91b9/" class="link link-primary" target="_blank">
-      <i class="fa-brands fa-linkedin text-white text-decoration-none fs-1"></i>
+    <a href="https://www.linkedin.com/in/tim-carey-9a45b91b9/"  target="_blank">
+      <i class="fa-brands fa-linkedin  text-decoration-none text-3xl fs-1"></i>
     </a>
-    <a href="https://twitter.com/TimCareyCodez" class="link link-primary p-2" target="_blank">
-      <i class="fa-brands fa-twitter text-white text-decoration-none fs-1"></i>
+    <a href="https://twitter.com/TimCareyCodez"  target="_blank">
+      <i class="fa-brands fa-twitter  text-decoration-none text-3xl fs-1"></i>
     </a>
-    <a href="https://github.com/tim-carey-code" class="link link-primary p-2" target="_blank">
-      <i class="fa-brands fa-github text-white text-decoration-none fs-1"></i>
+    <a href="https://github.com/tim-carey-code"  target="_blank">
+      <i class="fa-brands fa-github  text-decoration-none  text-3xl fs-1"></i>
     </a>
-    <a href="mailto:timcarey1989@gmail.com" class="link link-primaryp-2" target="_blank">
-      <i class="fa-solid fa-envelope text-white text-decoration-none fs-1"></i>
+    <a href="mailto:timcarey1989@gmail.com"  target="_blank">
+      <i class="fa-solid fa-envelope  text-decoration-none text-3xl fs-1"></i>
     </a>
+  </div>
+  <div class="mt-4">
+    <%= link_to "View my resume", resume_path, target: "_blank", class: "link link-primary" %>
+  </div>
+  <div class="mt-4">
+    <%= link_to "Check out my blog", blogs_path, class: "link link-primary" %>
   </div>
 </div>

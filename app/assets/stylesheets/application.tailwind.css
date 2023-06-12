@@ -1,3 +1,37 @@
 @tailwind base;
+@daisyui;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+   Add the following markup AFTER your import statements
+   Notice: this style contains only the rules for pagy-nav
+*/
+
+.pagy-nav.pagination {
+  @apply join;
+}
+
+.page.next a {
+  @apply join-item btn; 
+}
+
+.page.prev a {
+  @apply join-item btn;
+}
+
+.page.next.disabled {
+  @apply join-item btn;
+}
+
+.page.prev.disabled {
+  @apply join-item btn;
+}
+
+.page a, .page.gap {
+  @apply mx-1 join-item btn;
+}
+
+.page.active {
+  @apply mx-1 join-item btn btn-active;
+}

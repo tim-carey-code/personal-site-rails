@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html data-theme="light">
-  <head>
-    <title>PersonalSiteRails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html data-theme="synthwave"> 
+    <head>
+      <title>Tim Carey - Rails Developer</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
-  </head>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+      <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
+    </head>
 
-  <body>
-    <%= render "layouts/navbar" %>
-    <% if notice %>
-      <p class="bg-green-500 notice"><%= notice %></p>
-    <% elsif alert %> 
-      <p class="alert bg-red-500"><%= alert %></p>
-    <% end %>
-    <main class="container mx-auto mt-10 px-12">
-      <%= yield %>  
-    </main>  
-  </body>
+    <body>
+      <%= render "layouts/navbar" %>
+      <% if notice %>
+        <p class="bg-green-500 notice"><%= notice %></p>
+      <% elsif alert %> 
+        <p class="alert bg-red-500"><%= alert %></p>
+      <% end %>
+      <main class="container mx-auto mt-10 px-12">
+        <%= yield %>  
+      </main>  
+    </body>
 </html>
