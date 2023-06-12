@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  namespace :admin do
+      resources :blogs
+      resources :users
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+      root to: "blogs#index"
+    end
+  resources :blogs
+  devise_for :users
+  root "home#index"
+
+  get "/resume", to: "home#resume"
 end
