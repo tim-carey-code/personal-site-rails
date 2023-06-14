@@ -10,8 +10,7 @@ module Admin
     before_action :authenticate_admin
 
     def authenticate_admin
-      redirect_to '/', alert: 'You are not authorized to perform this action.' unless current_user && current_user.admin?
+      redirect_to "/", alert: "You are not authorized to perform this action." unless current_user && current_user.admin?
     end
-
   end
 end

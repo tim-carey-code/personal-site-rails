@@ -1,5 +1,4 @@
 class AdminPolicy < ApplicationPolicy
-
   def index?
     admin?
   end
@@ -29,6 +28,7 @@ class AdminPolicy < ApplicationPolicy
   end
 
   private
+
   def admin?
     user.admin?
   end

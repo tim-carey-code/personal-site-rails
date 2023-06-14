@@ -1,5 +1,4 @@
 class BlogPolicy < ApplicationPolicy
-
   def index?
     true
   end
@@ -34,4 +33,3 @@ class BlogPolicy < ApplicationPolicy
     user.admin?
   end
 end
-

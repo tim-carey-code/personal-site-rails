@@ -1,7 +1,10 @@
+@import 'actiontext.css';
+@import "trix";
 @tailwind base;
 @daisyui;
 @tailwind components;
 @tailwind utilities;
+
 
 /* 
    Add the following markup AFTER your import statements

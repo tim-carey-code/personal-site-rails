@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace :admin do
-      resources :blogs
-      resources :users
+    resources :blogs
+    resources :users
 
-      root to: "blogs#index"
-    end
+    root to: "blogs#index"
+  end
   resources :blogs
   devise_for :users
   root "home#index"
