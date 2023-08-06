@@ -14,7 +14,7 @@
 #  last_name              :string
 #  admin                  :boolean          default(FALSE)
 #
-require "test_helper"
+require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   # test "the truth" do

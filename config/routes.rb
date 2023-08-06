@@ -3,11 +3,11 @@ Rails.application.routes.draw do
     resources :blogs
     resources :users
 
-    root to: "blogs#index"
+    root to: 'blogs#index'
   end
   resources :blogs
   devise_for :users
-  root "home#index"
+  root 'home#index'
 
-  get "/resume", to: "home#resume"
+  get '/resume', to: 'home#resume'
 end

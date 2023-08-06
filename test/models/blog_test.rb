@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #  category   :string
 #
-require "test_helper"
+require 'test_helper'
 
 class BlogTest < ActiveSupport::TestCase
   # test "the truth" do
