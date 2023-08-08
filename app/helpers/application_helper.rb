@@ -2,7 +2,7 @@ module ApplicationHelper
   include Pagy::Frontend
 
   def format_date(date)
-    date.strftime("%b %-d, %Y")
+    date.strftime('%b %-d, %Y')
   end
 
   def full_name(user)

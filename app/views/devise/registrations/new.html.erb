@@ -44,6 +44,11 @@
           <%= form.password_field :password_confirmation, required: true, autocomplete: "password confirmation", class: "input-field" %>
         </div>
       </div>
+      
+      <div>
+        <%= form.label :avatar, class: "block text-sm font-medium leading-6 text-white" %>
+        <%= form.file_field :avatar %>
+      </div>
 
       <div class="justify-center flex m-4">
         <%= form.submit "Sign Up", class: "btn btn-block btn-primary" %>
