@@ -1,9 +1,8 @@
 module.exports = {
   content: [
-    './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
-    './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
+    './app/javascript/**/*.js',
+    './app/views/**/*',
   ],
   theme: {
     fontSize: {
@@ -42,11 +41,11 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
-    // require('daisyui'),
+    require('daisyui'),
   ],
 
-  // daisyui: {
-  //   themes: ["synthwave"]
-  // }
+  daisyui: {
+    themes: ["light"]
+  }
 
 };

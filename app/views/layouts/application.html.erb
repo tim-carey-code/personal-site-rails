@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html data-theme="synthwave" class=""> 
+<html data-theme="light" class=""> 
     <head>
-      <title>Tim Carey - Rails Developer</title>
+      <title><%= yield(:title).present? ? yield(:title) : "Tim Carey - Rails Developer" %></title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
@@ -26,6 +26,7 @@
     ></script>
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
       <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
       <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
       <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
     </head>

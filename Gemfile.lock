@@ -76,6 +76,9 @@ GEM
       kaminari (>= 1.0)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
+      rake (>= 10.4, < 14.0)
     ast (2.4.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
@@ -294,6 +297,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  annotate
   bootsnap
   capybara
   cssbundling-rails

@@ -86,7 +86,7 @@
       <p class="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left">
         I'm a passionate developer, entrepreneur, and general technology
         enthusiast living in Philadelphia. I've worked with a bunch of
-        startups to help them develop their ideas into profitable businesses.
+        startups to help them develop their ideas into profitable businesses. I specialize in Ruby on Rails, PostgreSQL, Ruby, and JavaScript.
       </p>
       <div
         class="flex flex-wrap items-center justify-center mt-10 gap-y-6 gap-x-10 lg:justify-start"
@@ -191,7 +191,7 @@
               class="absolute right-12 -top-6 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:left-44 lg:-top-6 lg:px-10 2xl:-left-48 2xl:top-14"
             >
             <%= image_tag "rails.png", class: "w-4 h-auto", alt: "Ruby on Rails" %>
-              2 years of experience
+              3 years of experience
             </div>
 
             <!-- Experience with Tech 2 -->
@@ -207,7 +207,7 @@
               class="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28"
             >
               <%= image_tag "ruby.png", class: "w-auto h-6", alt: "Ruby programming language" %>
-              2 years of experience
+              3 years of experience
             </div>
           </div>
         </div>
@@ -1467,8 +1467,8 @@
       </div>
       <div class="lg:ml-auto lg:max-w-sm">
         <p class="text-lg text-slate-700">
-          Iced pumpkin ristretto irish trifecta robusta trade froth affogato
-          barista con barista cappuccino filter roast.
+          "Tim helped created an extremely valuable asset out of a product that was sliding precipitously towards liability. 
+          I’d recommend him to anyone looking for a professional who gets the job done."
         </p>
 
         <!-- Carousel navigation buttons -->
@@ -1600,7 +1600,7 @@
                   “Highly skilled and professional”
                 </h4>
                 <p class="mt-3 text-sm leading-7 text-slate-700">
-                  He helped created an extremely valuable asset out of a product that was sliding precipitously towards liability. 
+                  Tim helped created an extremely valuable asset out of a product that was sliding precipitously towards liability. 
                   I’d recommend him to anyone looking for a professional who gets the job done.
                 </p>
               </div>
@@ -1701,12 +1701,11 @@
                 <h4
                   class="text-xl font-medium mt-7 font-display text-slate-900"
                 >
-                  “I highly recommend him”
+                  “I'm really impressed with the quality of his work”
                 </h4>
                 <p class="mt-3 text-sm leading-7 text-slate-700">
-                  And robusta french bar luwak extra caffeine cup filter
-                  macchiato skinny shop cream that variety. Caramel black
-                  affogato con frappuccino mocha sweet milk and.
+                 Tim led the successful upgrade of our Rails app(from 5 to 7), seamlessly introduced new features, upgraded and added new billing features
+                  and worked swiftly and efficiently. Good communication, we always knew what work was being done, and got daily updates on progress.
                 </p>
               </div>
 
@@ -1716,17 +1715,13 @@
                 <div class="flex items-center justify-between">
                   <div class="">
                     <p class="font-medium font-display text-md text-slate-900">
-                      Sean Murphy
+                      Geoff Sakala
                     </p>
                     <p class="mt-1.5 text-sm text-slate-600">
-                      Founder of North Agency
+                      CEO JellySwitch
                     </p>
                   </div>
-                  <img
-                    src="./images/avatars/avatar-2.png"
-                    alt="Sean Murphy"
-                    class="rounded-full h-14 w-14"
-                  />
+                  <%= image_tag "geoff-sakala.jpg", class: "rounded-full h-14 w-14", alt: "Geoff Sakala(CEO JellySwitch)" %>
                 </div>
               </div>
             </div>
@@ -1810,12 +1805,13 @@
                 <h4
                   class="text-xl font-medium mt-7 font-display text-slate-900"
                 >
-                  “I’m so lucky I found John!”
+                  “I’m so lucky I found Tim!”
                 </h4>
                 <p class="mt-3 text-sm leading-7 text-slate-700">
-                  And robusta french bar luwak extra caffeine cup filter
-                  macchiato skinny shop cream that variety. Caramel black
-                  affogato con frappuccino mocha sweet milk and.
+                 Tim is an absolute rockstar! With their expertise and dedication, we turned an idea into a fully-fledged app at EZNewswire. 
+                 They crafted an application that leverages ChatGPT to craft press release articles. 
+                 In lightning-fast speed, they transformed concepts into a live product, allowing us to impress investors at an incredible pace. 
+                 If you're seeking a developer who can turn dreams into reality, Tim is the one to call.
                 </p>
               </div>
 
@@ -1825,15 +1821,11 @@
                 <div class="flex items-center justify-between">
                   <div class="">
                     <p class="font-medium font-display text-md text-slate-900">
-                      Elaine Foster
+                      Neel Shah
                     </p>
-                    <p class="mt-1.5 text-sm text-slate-600">CEO of Wakatech</p>
+                    <p class="mt-1.5 text-sm text-slate-600">CEO of EZNewswire</p>
                   </div>
-                  <img
-                    src="./images/avatars/avatar-3.png"
-                    alt="Elaine Foster"
-                    class="rounded-full h-14 w-14"
-                  />
+                  <%= image_tag "neel-shah.jpg", class: "rounded-full h-14 w-14", alt: "Neel Shah(CEO EZNewswire" %>
                 </div>
               </div>
             </div>
@@ -2725,357 +2717,114 @@
         </svg>
       </div>
 
+    <% @last_three_blog_posts.each do |blog| %>
       <!-- 1st Article -->
-      <article
-        class="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100"
-      >
-        <!-- Image -->
-        <div class="w-full px-4 pt-4">
-          <a
-            href="article.html"
-            class="relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2"
-          >
-            <img
-              src="./images/articles/article-01.jpg"
-              alt=""
-              class="object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"
-            ></div>
-          </a>
-        </div>
-
-        <!-- Content -->
-        <div
-          class="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7"
+        <article
+          class="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100"
         >
-          <a
-            href="#"
-            class="relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
+          <!-- Image -->
+          <div class="w-full px-4 pt-4">
+            <%= link_to blog_path(blog), class: "relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2" do %>
+              <%= image_tag blog.cover_image, class: "object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105", alt: blog.title %>
+              <div class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5">
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Content -->
+          <div
+            class="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-4 h-4 text-sky-600"
+            <a
+              href="#"
+              class="relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
             >
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.75"
-                transform="translate(0.5 0.5)"
-                fill="none"
-                stroke="currentColor"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4 text-sky-600"
               >
-                <polyline
-                  points="8.333,14 1,14 1,1 23,1 23,14 20,14 "
-                ></polyline>
-                <line
-                  x1="13"
-                  y1="14"
-                  x2="19"
-                  y2="20"
+                <g
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.75"
+                  transform="translate(0.5 0.5)"
+                  fill="none"
                   stroke="currentColor"
-                ></line>
-                <polygon
-                  points=" 6,7 10,19 13,14 18,11 "
-                  stroke="currentColor"
-                ></polygon>
-              </g>
-            </svg>
-            Web Development
-          </a>
-          <div class="flex-1">
-            <h3
-              class="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900"
-            >
-              <a href="article.html">
+                >
+                  <polyline
+                    points="8.333,14 1,14 1,1 23,1 23,14 20,14 "
+                  ></polyline>
+                  <line
+                    x1="13"
+                    y1="14"
+                    x2="19"
+                    y2="20"
+                    stroke="currentColor"
+                  ></line>
+                  <polygon
+                    points=" 6,7 10,19 13,14 18,11 "
+                    stroke="currentColor"
+                  ></polygon>
+                </g>
+              </svg>
+              Web Development
+            </a>
+            <div class="flex-1">
+              <h3
+                class="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900"
+              >
+              <%= link_to blog_path(blog) do %>
                 <span class="absolute inset-0"></span>
-                ChatGPT : A Developer's Best Friend or Worst Enemy?
-              </a>
-            </h3>
-            <p class="mt-3.5 text-md leading-7 text-slate-700 line-clamp-3">
-              Explore the pros and cons of ChatGPT as a tool for developers, and
-              whether its AI-powered capabilities are a boon or a bane in the
-              world of programming and software development.
-            </p>
-          </div>
-          <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                />
-              </svg>
-              <time datetime="2023-03-24">Mar 23, 2023</time>
-            </span>
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              11 minute read
-            </span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2nd Article -->
-      <article
-        class="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100"
-      >
-        <!-- Image -->
-        <div class="w-full px-4 pt-4">
-          <a
-            href="article.html"
-            class="relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2"
-          >
-            <img
-              src="./images/articles/article-02.jpg"
-              alt=""
-              class="object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"
-            ></div>
-          </a>
-        </div>
-
-        <!-- Content -->
-        <div
-          class="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7"
-        >
-          <a
-            href="#"
-            class="relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-4 h-4 text-sky-600"
-            >
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.75"
-                transform="translate(0.5 0.5)"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  d="M6,3H3C1.895,3,1,3.895,1,5 v0c0,1.105,0.895,2,2,2"
-                ></path>
-                {' '}
-                <polyline
-                  points=" 6,7 6,1 20,1 20,7 "
+                <%= blog.title %>
+              <% end %>
+              </h3>
+              <p class="mt-3.5 text-md leading-7 text-slate-700 line-clamp-3">
+                <%= limit_action_text_content(blog.content, 21) %>
+              </p>
+            </div>
+            <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
+              <span class="flex items-center gap-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
                   stroke="currentColor"
-                ></polyline>
-                {' '}
-                <path
-                  d="M23,7H3 C1.895,7,1,6.105,1,5v15c0,1.657,1.343,3,3,3h19V7z"
-                ></path>
-                {' '}
-                <circle cx="17" cy="15" r="2"></circle>
-              </g>
-            </svg>
-
-            Business
-          </a>
-          <div class="flex-1">
-            <h3
-              class="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900"
-            >
-              <a href="article.html">
-                <span class="absolute inset-0"></span>
-                8 Ways Designers Can Make Money Online in 2022
-              </a>
-            </h3>
-            <p class="mt-3.5 text-md leading-7 text-slate-700 line-clamp-3">
-              Learn how to leverage your skills and capitalize on various
-              platforms to boost your income and thrive in the digital
-              landscape.
-            </p>
-          </div>
-          <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                />
-              </svg>
-              <time datetime="2023-03-19">Mar 19, 2023</time>
-            </span>
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              10 minute read
-            </span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3rd Article -->
-      <article
-        class="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100"
-      >
-        <!-- Image -->
-        <div class="w-full px-4 pt-4">
-          <a
-            href="article.html"
-            class="relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2"
-          >
-            <img
-              src="./images/articles/article-03.jpg"
-              alt=""
-              class="object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"
-            ></div>
-          </a>
-        </div>
-
-        <!-- Content -->
-        <div
-          class="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7"
-        >
-          <a
-            href="#"
-            class="relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-4 h-4 text-sky-600"
-            >
-              <g
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.75"
-                transform="translate(0.5 0.5)"
-                fill="none"
-                stroke="currentColor"
-              >
-                <polyline
-                  points="8.333,14 1,14 1,1 23,1 23,14 20,14 "
-                ></polyline>
-                <line
-                  x1="13"
-                  y1="14"
-                  x2="19"
-                  y2="20"
+                  class="w-5 h-5 text-slate-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                  />
+                </svg>
+                <time datetime="2023-03-24"><%= blog.created_at.strftime("%b %-d, %Y") %></time>
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
                   stroke="currentColor"
-                ></line>
-                <polygon
-                  points=" 6,7 10,19 13,14 18,11 "
-                  stroke="currentColor"
-                ></polygon>
-              </g>
-            </svg>
-            Web Development
-          </a>
-          <div class="flex-1">
-            <h3
-              class="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900"
-            >
-              <a href="article.html">
-                <span class="absolute inset-0"></span>
-                Will Artificial Intelligence Replace Designers?
-              </a>
-            </h3>
-            <p class="mt-3.5 text-md leading-7 text-slate-700 line-clamp-3">
-              Breve cup lait affogato cortado grounds pumpkin filter. Robusta
-              cappuccino french milk dark flavour brewed go caffeine a aromatic
-              robust shot.
-            </p>
+                  class="w-5 h-5 text-slate-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <%= blog.time_of_read %> minute read
+              </span>
+            </div>
           </div>
-          <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                />
-              </svg>
-              <time datetime="2023-03-24">Mar 4, 2023</time>
-            </span>
-            <span class="flex items-center gap-1.5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="currentColor"
-                class="w-5 h-5 text-slate-400"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              9 minute read
-            </span>
-          </div>
-        </div>
-      </article>
+        </article>
+      <% end %>
     </div>
   </div>
 </section>

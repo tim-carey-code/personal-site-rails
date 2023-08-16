@@ -9,8 +9,9 @@ class BlogDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    content: Field::Text,
     title: Field::String,
+    time_of_read: Field::Number,
+    category: Field::String,
     user: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
@@ -23,7 +24,7 @@ class BlogDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    content
+    category
     title
     user
   ].freeze
@@ -32,9 +33,10 @@ class BlogDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    content
     title
     user
+    category
+    time_of_read
     created_at
     updated_at
   ].freeze
@@ -44,7 +46,8 @@ class BlogDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
-    content
+    category
+    time_of_read
     user
   ].freeze
 
