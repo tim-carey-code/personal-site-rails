@@ -17,4 +17,17 @@ module ApplicationHelper
 
     ActionText::Content.new(limited_plain_text)
   end
+
+  def display_service_label(service)
+    case service
+    when 'web_development'
+      'Web Development'
+    when 'web_design'
+      'Web Design'
+    when 'other'
+      'Other'
+    else
+      service
+    end
+  end
 end
