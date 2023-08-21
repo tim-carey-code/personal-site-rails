@@ -33,7 +33,7 @@
       <div class="items-center hidden md:flex md:space-x-6 lg:space-x-8">
         <%= link_to "Home", root_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25" %>
         <%= link_to "About", about_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"%>
-        <%= link_to "Work", work_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"%>
+        <%# link_to "Work", work_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"%>
         <%= link_to "Blog", blogs_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"%>
         <%= link_to "Contact", contact_path, class: "relative duration-200 after:absolute after:left-1/2 after:-bottom-2.5 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[&quot;&quot;] font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"%>
 
@@ -71,19 +71,10 @@
             x-show.transition="open"
             @click.away="open = false"
           >
-            <a
-              href="index.html"
-              class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
-            >
-              Home
-            </a>
-            <a
-              href="about.html"
-              class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
-            >
-              About
-            </a>
-            <a
+            <%= link_to "Home", root_path, class: "block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900" %>
+            <%= link_to "About", about_path, class: "block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900" %>
+
+            <!-- <a
               href="work.html"
               class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
             >
@@ -94,20 +85,15 @@
               class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
             >
               Case study
-            </a>
+            </a> -->
             <%= link_to "Blog", blogs_path, class: "block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"%>
-            <a
+            <!-- <a
               href="article.html"
               class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
             >
               Blog post
-            </a>
-            <a
-              href="contact.html"
-              class="block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
-            >
-              Contact
-            </a>
+            </a> -->
+            <%= link_to "Contact", contact_path, class: "block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900" %> 
             <% if user_signed_in? %>
                 <% if current_user.admin? %>
                   <%= link_to "Admin", admin_root_path, class: "block py-3.5 px-5 font-medium rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900" %>
