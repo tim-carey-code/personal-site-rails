@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for subscribing to timcarey.dev, <%= @subscriber.email %>!</h1>
+    <p>Have a great day!</p>
+    <p>Don't want to be subscribed? <%= link_to "Click here", unsubscribe_url(token: @subscriber.token) %> to ubsubscribe</p>
+  </body>
+</html>

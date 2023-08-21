@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html data-theme="synthwave" class=""> 
+<html data-theme="light" class=""> 
     <head>
-      <title>Tim Carey - Rails Developer</title>
+      <title><%= yield(:title).present? ? yield(:title) : "Tim Carey - Rails Developer" %></title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
@@ -9,9 +9,11 @@
           <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700&family=Mr+Dafoe&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico" rel="stylesheet"> 
         <!-- Swiper -->
     <link
       rel="stylesheet"
@@ -26,6 +28,7 @@
     ></script>
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
       <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
       <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
       <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
     </head>
@@ -38,5 +41,6 @@
         <p class="alert bg-red-500"><%= alert %></p>
       <% end %>
         <%= yield %>
+        <%= render "layouts/footer" %>
     </body>
 </html>

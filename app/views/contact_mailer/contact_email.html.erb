@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New Contact Form Submission</h1>
+    <p>Name: <%= @contact.name %></p>
+    <p>Email: <%= @contact.email %></p>
+    <p>Phone Number: <%= @contact.phone_number %></p>
+    <p>Message: <%= @contact.message %></p>
+    <% if @contact.expected_services.length > 0 %>
+      <p>Expected Services:</p>
+      <ul>
+        <% @contact.expected_services.each do |service| %>
+          <li><%= service %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </body>
+</html>
