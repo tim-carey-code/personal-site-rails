@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html data-theme="light" class=""> 
-    <head>
-      <title><%= yield(:title).present? ? yield(:title) : "Tim Carey - Rails Developer" %></title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <%= csrf_meta_tags %>
-      <%= csp_meta_tag %>
+<html data-theme="light" class="">
+<head>
+  <title><%= yield(:title).present? ? yield(:title) : "Tim Carey - Rails Developer" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700&family=Mr+Dafoe&display=swap"
-      rel="stylesheet"
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700&family=Mr+Dafoe&display=swap"
+    rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico" rel="stylesheet"> 
-        <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico" rel="stylesheet">
+  <!-- Swiper -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- AlpineJS -->
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-      <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
-      <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
-      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-      <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
-    </head>
+  <!-- AlpineJS -->
+  <script
+    defer
+    src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+  ></script>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  <script src="https://kit.fontawesome.com/f27c074aa6.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-      <%= render "layouts/navbar" %>
-      <% if notice %>
-        <p class="bg-green-500 notice"><%= notice %></p>
-      <% elsif alert %> 
-        <p class="alert bg-red-500"><%= alert %></p>
-      <% end %>
-        <%= yield %>
-        <%= render "layouts/footer" %>
-    </body>
+<body>
+<%= render "layouts/navbar" %>
+<% if notice %>
+  <p class="bg-green-500 notice"><%= notice %></p>
+<% elsif alert %>
+  <p class="alert bg-red-500"><%= alert %></p>
+<% end %>
+<%= yield %>
+<%= render "layouts/footer" %>
+</body>
 </html>
