@@ -11,22 +11,10 @@
     <nav class="relative z-50 flex items-center justify-between w-full">
       <!-- Logo -->
       <div class="flex items-center shrink-0">
-        <a
-          href="index.html"
-          aria-label="Home"
-          class="flex items-center flex-shrink-0"
-        >
-          <img
-            src="./images/logo.png"
-            alt=""
-            class="w-auto h-8 sm:h-9 md:hidden lg:block lg:h-10"
-            />
-          <img
-            src="./images/logo-icon.png"
-            alt=""
-            class="hidden w-auto h-8 md:block lg:hidden"
-            />
-        </a>
+        <%= link_to root_path, aria_label: "Home", class: "flex items-center flex-shrink-0" do %>
+          <%= image_tag "logo.png", class: "w-auto sm:h-9 md:hidden lg:block lg:h-10", alt: "Tim Carey Logo" %>
+          <%= image_tag "logo-icon.png", class: "hidden w-auto h-8 md:block lg:hidden", alt: "Logo Icon" %>
+        <% end %>
       </div>
 
       <!-- Desktop navigation links -->
