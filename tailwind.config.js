@@ -1,8 +1,8 @@
 module.exports = {
   content: [
-    './app/helpers/**/*.rb',
-    './app/javascript/**/*.js',
-    './app/views/**/*',
+    "./app/helpers/**/*.rb",
+    "./app/javascript/**/*.js",
+    "./app/views/**/*",
   ],
   theme: {
     fontSize: {
@@ -41,11 +41,5 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
-    require('daisyui'),
   ],
-
-  daisyui: {
-    themes: ["light"]
-  }
-
 };

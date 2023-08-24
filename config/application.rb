@@ -19,6 +19,6 @@ module PersonalSiteRails
     # config.time_zone = "Central Time (US & Canada)"
     config.time_zone = 'Eastern Time (US & Canada)'
     # config.eager_load_paths << Rails.root.join("extras")
-    config.assets.css_compressor = nil
+    # config.assets.css_compressor = nil
   end
 end
