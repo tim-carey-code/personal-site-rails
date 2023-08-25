@@ -1,5 +1,5 @@
 class SubscriberMailer < ApplicationMailer
-
+  self.delivery_job = SubscriberEmailJob
   def subscriber_email
     @subscriber = params[:subscriber]
     @unsubscribe_url = subscriber_url(@subscriber)

@@ -5,7 +5,7 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       if @subscriber.save
-        SubscriberMailer.with(subscriber: @subscriber).subscriber_email.deliver_now
+        SubscriberMailer.with(subscriber: @subscriber).subscriber_email.deliver_later
         format.html { redirect_to blogs_path, notice: 'Thank you for subscribing!' }
       else
         format.html { redirect_to blogs_path, notice: 'There was an error subscribing you.' }
