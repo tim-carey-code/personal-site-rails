@@ -3,12 +3,16 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new(subscriber_params)
     @subscriber.token = SecureRandom.hex(16)
 
+    existing_subscriber = Subscriber.find_by(email: @subscriber.email)
+
     respond_to do |format|
-      if @subscriber.save
+      if existing_subscriber
+        format.html { redirect_to blogs_path, alert: "You are already subscribed." }
+      elsif @subscriber.save
         SubscriberMailer.with(subscriber: @subscriber).subscriber_email.deliver_later
         format.html { redirect_to blogs_path, notice: 'Thank you for subscribing!' }
       else
-        format.html { redirect_to blogs_path, notice: 'There was an error subscribing you.' }
+        format.html { redirect_to blogs_path, alert: "There was an error subscribing you."}
       end
     end
   end
