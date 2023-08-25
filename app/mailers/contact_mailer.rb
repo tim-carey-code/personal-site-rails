@@ -1,5 +1,4 @@
 class ContactMailer < ApplicationMailer
-  self.delivery_job = ContactEmailJob
   include ApplicationHelper
   helper :application
 
