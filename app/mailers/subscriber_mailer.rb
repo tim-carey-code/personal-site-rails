@@ -1,5 +1,4 @@
 class SubscriberMailer < ApplicationMailer
-  default from: 'notifications@example.com'
 
   def subscriber_email
     @subscriber = params[:subscriber]
