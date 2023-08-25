@@ -41,5 +41,9 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
+    require("daisyui"),
   ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 };
