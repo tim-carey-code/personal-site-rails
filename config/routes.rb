@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  constraints(subdomain: 'www') do
+    get '*path', to: redirect(subdomain: nil, path: '/%{path}'), via: :all
+  end
   namespace :admin do
     resources :blogs
     resources :users
