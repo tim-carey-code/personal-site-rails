@@ -151,18 +151,20 @@
     </ul>
 
     <!-- Articles list -->
-    <% @blogs.each do |blog| %>
       <div
         class="grid max-w-lg gap-8 mx-auto mt-14 sm:mt-16 md:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:gap-y-6 lg:gap-x-5 xl:gap-x-6 xl:gap-y-8"
       >
         <!-- 1st Article -->
+      <% @blogs.each do |blog| %>
         <article
           class="flex flex-col items-start justify-between shadow-sm rounded-2xl bg-slate-50 shadow-sky-100/50 ring-1 ring-slate-100"
         >
           <!-- Image -->
           <div class="w-full px-4 pt-4">
             <%= link_to blog_path(blog), class: "relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2" do %>
-              <%= image_tag blog.cover_image, alt: blog.title, class: "object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105" %>
+              <% if blog.cover_image.attached? %>
+                <%= image_tag blog.cover_image, alt: blog.title, class: "object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105" %>
+              <% end %>
               <div
                 class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"
               ></div>
@@ -262,13 +264,13 @@
             </div>
           </div>
         </article>
-    <% end %>
-
-
+      <% end %>
     </div>
-
-    <!-- Pagination -->
     <div class="flex items-center justify-center gap-2 mt-20">
+      <%== pagy_nav(@pagy, link_extra: 'class="nav-link"') if @pagy.pages > 1 %>
+    </div>
+    <!-- Pagination -->
+    <!-- <div class="flex items-center justify-center gap-2 mt-20">
           <span
             class="inline-flex items-center justify-center w-20 h-10 text-sm font-medium rounded-full shadow-sm bg-slate-50 text-slate-500/60 shadow-sky-100/50 ring-1 ring-slate-900/5"
           >
@@ -309,6 +311,6 @@
       >
         Next
       </a>
-    </div>
+    </div> -->
   </div>
 </section>

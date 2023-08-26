@@ -1925,7 +1925,9 @@
             <!-- Image -->
             <div class="w-full px-4 pt-4">
               <%= link_to blog_path(blog), class: "relative block w-full overflow-hidden group aspect-w-16 aspect-h-9 rounded-xl md:aspect-w-3 md:aspect-h-2" do %>
-                <%= image_tag blog.cover_image, class: "object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105", alt: blog.title %>
+                <% if blog.cover_image.attached? %>
+                  <%= image_tag blog.cover_image, class: "object-cover w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105", alt: blog.title %>
+                <% end %>
                 <div class="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5">
                 </div>
               <% end %>
