@@ -10,6 +10,7 @@ class BlogDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    tagline: Field::String,
     time_of_read: Field::Number,
     category: Field::String,
     user: Field::BelongsTo,
@@ -26,6 +27,7 @@ class BlogDashboard < Administrate::BaseDashboard
     id
     category
     title
+    tagline
     user
   ].freeze
 
@@ -37,6 +39,7 @@ class BlogDashboard < Administrate::BaseDashboard
     user
     category
     time_of_read
+    tagline
     created_at
     updated_at
   ].freeze
@@ -47,6 +50,7 @@ class BlogDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     category
+    tagline
     time_of_read
     user
   ].freeze
