@@ -2,8 +2,16 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   include Pundit::Authorization
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_filter :redirect_subdomain
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  
+  def redirect_subdomain
+    if request.host == 'www.puppies.com'
+      redirect_to 'http://puppies.com' + request.fullpath, :status => 301
+    end
+  end
 
   protected
 
