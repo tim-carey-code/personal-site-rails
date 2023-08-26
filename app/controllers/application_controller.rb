@@ -5,15 +5,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  if Rails.env == 'production'
-    before_action :redirect_subdomain
-    def redirect_subdomain
-      if request.host == 'https://www.timcarey.dev' || 'www.timcarey.dev'
-        redirect_to 'http://timcarey.dev' + request.fullpath, status: 301, allow_other_host: true
-      end
-    end
-  end
-
   protected
 
   def user_not_authorized
