@@ -1,11 +1,24 @@
 
 Rails.application.routes.draw do
+
   constraints(subdomain: 'www') do
-    get ':any', to: redirect(subdomain: nil, status: 301), any: /.*/
+    get ':any', to: redirect(subdomain: nil, status: 301, protocol: 'https'), any: /.*/
   end
 
+  
   # Redirect root path from www subdomain
   get '/', to: redirect(subdomain: nil, status: 301), constraints: { subdomain: 'www' }
+
+
+  constraints(subdomain: 'www') do
+    get '/', to: redirect(subdomain: nil, status: 301, protocol: 'https')
+    get ':any', to: redirect(subdomain: nil, status: 301, protocol: 'https'), any: /.*/
+  end
+
+# Additional rule for HTTPS with www subdomain
+  constraints(subdomain: 'www', protocol: 'http') do
+    get '/', to: redirect(subdomain: nil, status: 301, protocol: 'https')
+  end
 
   namespace :admin do
     resources :blogs
