@@ -82,12 +82,6 @@ trix-toolbar .trix-button--icon-redo::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M21 14a1 1 0 0 1-1 1h-6a1 1 0 1 1 0-2h3.743c-2.247-2.764-5.151-3.668-7.579-3.264-2.589.432-4.739 2.356-5.174 5.405a1 1 0 0 1-1.98-.283c.564-3.95 3.415-6.526 6.826-7.095 3.08-.513 6.534.614 9.164 3.626V8a1 1 0 1 1 2 0v6Zm-2-1Z' clip-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-.trix-content {
-  pre.hljs {
-    background: #282828;
-  }
-}
-
 trix-editor {
   min-height: 250px;
 }
