@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  constraints(subdomain: 'www') do
-    get '*path', to: redirect(subdomain: nil, status: 301)
+
+  constraints(host: /^www\./i) do
+    get ':any', to: redirect(subdomain: nil, path: '/%{any}'), any: /.*/
   end
+
   namespace :admin do
     resources :blogs
     resources :users

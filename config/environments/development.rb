@@ -74,4 +74,6 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_view.image_loading = "lazy"
   config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.hosts << "www.lvh.me"
+  config.hosts << "lvh.me"
 end
