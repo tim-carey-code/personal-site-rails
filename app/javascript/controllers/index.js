@@ -9,3 +9,9 @@ application.register("hello", HelloController);
 
 import AlertsController from "./alerts_controller";
 application.register("alerts", AlertsController);
+
+import TiptapController from "./tiptap_controller";
+application.register("tiptap", TiptapController);
+
+import HighlightController from "./highlight_controller";
+application.register("highlight", HighlightController);

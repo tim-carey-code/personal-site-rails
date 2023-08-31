@@ -1,5 +1,5 @@
 <div id="<%= dom_id blog %>">
-<main>
+<main data-controller="highlight">
     <!-- Article -->
     <article>
         <!-- Article header -->
@@ -101,7 +101,10 @@
                     <div
                             class="relative block w-full overflow-hidden shadow-lg aspect-w-16 aspect-h-9 rounded-3xl shadow-sky-100/50 md:aspect-w-3 md:aspect-h-2"
                     >
+
+                      <% if blog.cover_image.attached? %>
                         <%= image_tag blog.cover_image, class: "object-cover w-full rounded-3xl bg-slate-100", alt: blog.title %>
+                      <% end %> 
                         <div
                                 class="absolute inset-0 rounded-3xl ring-1 ring-inset ring-slate-900/10"
                         ></div>
@@ -113,7 +116,7 @@
         <div class="px-4 bg-white sm:px-6 lg:px-8">
             <!-- Article body -->
             <div class="max-w-2xl mx-auto prose prose-lg">
-              <%= blog.content %>
+              <%= raw blog.content %>
             </div>
 
             <!-- Article footer -->

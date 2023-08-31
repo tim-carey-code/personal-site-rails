@@ -1,4 +1,4 @@
-<%= form_with(model: blog) do |form| %>
+<%= form_with(model: blog, data: { controller: "tiptap" })  do |form| %>
   <% if blog.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -21,9 +21,8 @@
     <%= form.label :time_of_read, style: "display: block" %>
     <%= form.number_field :time_of_read %>
   </div>
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.rich_text_area :content %>
+  <%= form.hidden_field :content, data: { tiptap_target: "input" } %>
+  <div data-tiptap-target="content">
   </div>
   <div>
     <%= form.label :category, style: "display: block" %>

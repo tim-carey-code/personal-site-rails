@@ -23,3 +23,17 @@
     @apply inline-flex items-center justify-center w-10 h-10 text-sm font-medium rounded-full shadow-sm bg-sky-600 text-sky-50 shadow-sky-100/50 ring-1 ring-slate-900/5;
   }
 }
+
+@layer base {
+  h1 {
+    @apply text-5xl !important;
+  }
+
+  h2 {
+    @apply text-3xl !important;
+  }
+
+  h3 {
+    @apply text-2xl !important;
+  }
+}

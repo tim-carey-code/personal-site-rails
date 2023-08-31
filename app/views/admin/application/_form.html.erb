@@ -13,7 +13,7 @@ and renders all form fields for a resource's editable attributes.
 
 [1]: http://www.rubydoc.info/gems/administrate/Administrate/Page/Form
 %>
-<%= form_for([namespace, page.resource], html: { class: "form" }) do |f| %>
+<%= form_for([namespace, page.resource], data: { controller: "tiptap" }, html: { class: "form" }) do |f| %>
   <% if page.resource.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -39,9 +39,8 @@ and renders all form fields for a resource's editable attributes.
     <%= f.label :cover_image, class: "label label-text" %>
     <%= f.file_field :cover_image, class: "file-input file-input-bordered w-full max-w-xs" %>
   </div>
-  <div>
-    <%= f.label :content, class: "label label-text" %>
-    <%= f.rich_text_area :content %>
+  <%= f.hidden_field :content, data: { tiptap_target: "input" },  id: "serialized-content" %>
+  <div data-tiptap-target="content">
   </div>
   <div class="form-actions mt-4 flex justify-center items-center">
     <%= f.submit %>
