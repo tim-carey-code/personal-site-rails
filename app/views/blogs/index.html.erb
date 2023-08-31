@@ -175,10 +175,7 @@
           <div
             class="relative flex flex-col flex-1 px-5 pt-8 pb-10 group xl:px-7"
           >
-            <a
-              href="#0"
-              class="relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
-            >
+          <%= link_to blog_path(blog), class: "relative z-10 flex items-center gap-2.5 text-md text-sky-700 transition duration-200 ease-in-out hover:text-sky-600" do %>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -212,7 +209,7 @@
                 </g>
               </svg>
               <%= blog.category %>
-            </a>
+          <% end %>
             <div class="flex-1">
               <h3
                 class="mt-4 text-xl font-medium leading-normal transition duration-200 ease-in-out font-display text-slate-900 decoration-slate-400 group-hover:text-sky-900"

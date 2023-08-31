@@ -12,7 +12,7 @@ By default, it renders:
 - Links to stylesheets and JavaScripts
 %>
 <!DOCTYPE html>
-<html data-theme="light" lang="<%= I18n.locale %>">
+<html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
     <meta name="ROBOTS" content="NOODP">
@@ -22,6 +22,7 @@ By default, it renders:
     </title>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "actiontext", "data-turbo-track": "relead" %>
+    <%= stylesheet_link_tag "tiptap", "data-turbo-track": "relead" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= render "stylesheet" %>
     <%= csrf_meta_tags %>
