@@ -7,7 +7,6 @@ import Paragraph from "@tiptap/extension-paragraph";
 import Text from "@tiptap/extension-text";
 import Link from "@tiptap/extension-link";
 import Heading from "@tiptap/extension-heading";
-import debounce from "lodash.debounce";
 import css from "highlight.js/lib/languages/css";
 import js from "highlight.js/lib/languages/javascript";
 import ts from "highlight.js/lib/languages/typescript";
