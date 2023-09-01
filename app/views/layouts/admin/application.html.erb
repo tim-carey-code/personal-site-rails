@@ -21,6 +21,9 @@ By default, it renders:
       <%= content_for(:title) %>
     </title>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "actiontext", "data-turbo-track": "relead" %>
+    <%= stylesheet_link_tag "tiptap", "data-turbo-track": "relead" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= render "stylesheet" %>
     <%= csrf_meta_tags %>
