@@ -3,7 +3,9 @@ module.exports = {
     "./app/helpers/**/*.rb",
     "./app/javascript/**/*.js",
     "./app/views/**/*",
-    "./app/components/**/*",
+    "./app/components/**/*.{erb,haml,html,slim}",
+    "./app/components/**/*.rb",
+
   ],
   theme: {
     fontSize: {

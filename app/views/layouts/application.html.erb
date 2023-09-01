@@ -40,18 +40,22 @@
 <%= render "layouts/navbar" %>
 <% if notice %>
   <div class="flex justify-center items-center">
-    <div data-controller="alerts" class="alert  w-[98vw] my-4 alert-success">
-      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-      <span><%= notice %></span>
-      <%= render ButtonComponent.new(hover_color: "#000", bg_color: "#1d232a", button_text: "Close", id: "dismiss-notice", text_color: "text-white") %>
+    <div data-controller="alerts" class="alert  flex rounded-xl items-center bg-[#36d399] p-4 w-[98vw] my-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current ml-4 shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span class="flex-grow ml-4"><%= notice %></span>
+      <div class="justify-center flex items-center">
+        <%= render ButtonComponent.new(hover_color: "#000", bg_color: "#1d232a", button_text: "Close", id: "dismiss-notice", text_color: "text-white") %>
+      </div>
     </div>
   </div>
 <% elsif alert %>
   <div class="flex justify-center items-center">
-    <div data-controller="alerts" class="alert alert-error my-4 w-[98vw]">
-      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-      <span><%= alert %></span>
-      <%= render ButtonComponent.new(hover_color: "#000", bg_color: "#1d232a", button_text: "Close", id: "dismiss-notice", text_color: "text-white") %>
+    <div data-controller="alerts" class="alert  flex rounded-xl items-center bg-[#f87272] p-4 w-[98vw] my-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current ml-4 shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span class="flex-grow ml-4"><%= alert %></span>
+      <div class="justify-center flex items-center">
+        <%= render ButtonComponent.new(hover_color: "#000", bg_color: "#1d232a", button_text: "Close", id: "dismiss-notice", text_color: "text-white") %>
+      </div>
     </div>
   </div>
 <% end %>
