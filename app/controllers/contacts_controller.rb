@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  invisible_captcha only: [:create], honeypot: :subtitle, on_spam: :spam_detected
   include ApplicationHelper
 
   def create
@@ -17,6 +18,10 @@ class ContactsController < ApplicationController
   end
 
   private
+
+  def spam_detected
+    redirect_to root_path, notice: "Thanks for your submission, will get back to you soon!"
+  end
 
   def contact_params
     params.require(:contact).permit(:name, :email, :message, :phone_number, expected_services: [])
