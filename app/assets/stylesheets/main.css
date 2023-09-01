@@ -1484,26 +1484,26 @@ select {
   padding-left: 1em;
 }
 
-.prose-lg :where(h1):not(:where([class~="not-prose"] *)) {
+/*.prose-lg :where(h1):not(:where([class~="not-prose"] *)) {
   font-size: 2.6666667em;
   margin-top: 0;
   margin-bottom: 0.8333333em;
   line-height: 1;
-}
+}*/
 
-.prose-lg :where(h2):not(:where([class~="not-prose"] *)) {
+/*.prose-lg :where(h2):not(:where([class~="not-prose"] *)) {
   font-size: 1.6666667em;
   margin-top: 1.8666667em;
   margin-bottom: 1.0666667em;
   line-height: 1.3333333;
-}
+}*/
 
-.prose-lg :where(h3):not(:where([class~="not-prose"] *)) {
+/*.prose-lg :where(h3):not(:where([class~="not-prose"] *)) {
   font-size: 1.3333333em;
   margin-top: 1.6666667em;
   margin-bottom: 0.6666667em;
   line-height: 1.5;
-}
+} */
 
 .prose-lg :where(h4):not(:where([class~="not-prose"] *)) {
   margin-top: 1.7777778em;
