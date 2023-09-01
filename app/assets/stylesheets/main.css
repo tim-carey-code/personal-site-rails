@@ -12,6 +12,21 @@ h6 {
   margin: unset;
 }
 
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
 .token.tag,
 .token.class-name,
 .token.selector,
