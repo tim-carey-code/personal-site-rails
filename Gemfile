@@ -9,6 +9,7 @@ gem 'administrate'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'devise'
+gem 'dockerfile-rails', '>= 1.5', group: :development
 gem 'faker'
 gem 'image_processing', '~> 1.2'
 gem 'invisible_captcha'
@@ -21,6 +22,8 @@ gem 'pundit'
 gem 'rails', '~> 7.0.5'
 gem 'redis', '~> 4.0'
 gem 'rubocop', require: false
+gem 'sentry-rails', '~> 5.10'
+gem 'sentry-ruby', '~> 5.10'
 gem 'sidekiq', '~> 7.1', '>= 7.1.2'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
@@ -45,10 +48,6 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'dockerfile-rails', '>= 1.5', group: :development
-
-gem 'sentry-ruby', '~> 5.10'
-
-gem 'sentry-rails', '~> 5.10'
-
 # gem "escompress", "~> 0.3.0"
+
+gem "tailwindcss-rails", "~> 2.0"
