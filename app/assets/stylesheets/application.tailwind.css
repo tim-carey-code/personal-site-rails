@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'tiptap.css';
 
 @layer components {
   .page.prev.disabled {
