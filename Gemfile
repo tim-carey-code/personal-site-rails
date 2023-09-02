@@ -49,5 +49,3 @@ group :test do
 end
 
 # gem "escompress", "~> 0.3.0"
-
-gem "tailwindcss-rails", "~> 2.0"
