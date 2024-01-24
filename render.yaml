@@ -1,0 +1,23 @@
+databases:
+  - name: personal_dev_site
+    databaseName: personal_site_rails_production
+    user: personal_site_rails
+    plan: free
+
+services:
+  - type: web
+    name: personal_dev_site
+    runtime: ruby
+    plan: free
+    buildCommand: './bin/render-build.sh'
+    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: './bin/rails server'
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: personal_site_rails_production
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
