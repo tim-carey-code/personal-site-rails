@@ -29,6 +29,5 @@
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
-  "packageManager": "yarn@1.22.19",
-  "devDependencies": {}
+  "packageManager": "yarn@1.22.19"
 }
