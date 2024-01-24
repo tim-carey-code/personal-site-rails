@@ -1,7 +1,7 @@
 databases:
   - name: personal_dev_site
-    databaseName: personal_site_rails_production
-    user: personal_site_rails
+    databaseName: dev_site_db
+    user: personal_site_rails_production_user
     plan: free
 
 services:
