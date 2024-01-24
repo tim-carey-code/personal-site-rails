@@ -1,6 +1,6 @@
 databases:
   - name: personal_dev_site
-    databaseName: dev_site_db
+    databaseName: personal_site_rails_production
     user: personal_site_rails_production_user
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: personal_site_rails_production
+          name: dev_site_db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
