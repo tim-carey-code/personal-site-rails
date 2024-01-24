@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for tc-dev-site on 2023-09-01T19:29:01-04:00
+# fly.toml app configuration file generated for tc-dev-site on 2024-01-24T12:31:04-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -19,6 +19,11 @@ console_command = "/rails/bin/rails console"
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 1024
 
 [[statics]]
   guest_path = "/rails/public"
