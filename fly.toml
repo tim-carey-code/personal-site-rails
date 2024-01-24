@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for tc-dev-site on 2024-01-24T12:31:04-05:00
+# fly.toml app configuration file generated for personal-site-rails on 2024-01-24T14:01:00-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "tc-dev-site"
+app = "personal-site-rails"
 primary_region = "ewr"
 console_command = "/rails/bin/rails console"
 
@@ -11,6 +11,10 @@ console_command = "/rails/bin/rails console"
 
 [deploy]
   release_command = "./bin/rails db:prepare"
+
+[processes]
+  app = "./bin/rails server"
+  sidekiq = "bundle exec sidekiq"
 
 [http_service]
   internal_port = 3000
