@@ -1,6 +1,4 @@
-
 Rails.application.routes.draw do
-
   constraints(subdomain: 'www', protocol: 'https') do
     get ':any', to: redirect(subdomain: nil, status: 301), any: /.*/
   end

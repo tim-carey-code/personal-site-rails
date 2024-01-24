@@ -153,24 +153,13 @@
               </div>
             </div>
             <div>
-              <%= form.label :email, class: "block font-medium leading-6 text-md text-slate-900" %>
+              <%= form.label :email, class: "block font-medium leading-6 mt-4 text-md text-slate-900" %>
               <div class="mt-2">
                 <%= form.email_field :email, required: true, autocomplete: "email", placeholder: "youremail@email.com", class: "block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-slate-900 shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60" %>
               </div>
             </div>
             <div>
-              <div class="flex justify-between leading-6 text-md">
-                <%= form.label :phone_number, class: "block font-medium leading-6 text-md text-slate-900" %>
-                <p id="phone-description" class="text-slate-500/80">
-                  Optional
-                </p>
-              </div>
-              <div class="mt-2">
-                <%= form.telephone_field :phone_number, autocomplete: "tel", aria_describedby: "phone-description", required: true, placeholder: "+1 (800) 123-4567", class: "block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-slate-900 shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60" %>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between leading-6 text-md">
+              <div class="flex justify-between leading-6 mt-4 text-md">
                 <%= form.label :message, "How can I help you?", class: "block font-medium text-slate-900" %>
                 <p id="message-description" class="text-slate-500/80">
                   Max 500 characters
@@ -184,7 +173,7 @@
               <%= form.invisible_captcha :subtitle, sentence_for_humans: "Hey! Leave this input empty!" %>
             </div>
             <fieldset>
-              <legend class="block font-medium leading-6 text-md text-slate-900">
+              <legend class="block font-medium leading-6 text-md mt-4 text-slate-900">
                 Expected services
               </legend>
               <div class="mt-4 space-y-3">
