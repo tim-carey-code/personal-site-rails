@@ -4,7 +4,6 @@ import "highlight.js/styles/github.css";
 
 export default class extends Controller {
   connect() {
-    console.log("Hello");
     hljs.configure({ languages: ["ruby", "erb", "bash", "javascript"] });
     document.addEventListener("turbo:load", (event) => {
       document.querySelectorAll("pre").forEach((block) => {

@@ -15,3 +15,6 @@ application.register("tiptap", TiptapController);
 
 import HighlightController from "./highlight_controller";
 application.register("highlight", HighlightController);
+
+import CopyController from "./copy_controller";
+application.register("copy", CopyController);
